@@ -4,7 +4,14 @@
          filmcalc length1|time1|keykode +|- length2|time2 [FFfps|Hz] [Lp]
          filmcalc length1|time1 *|/ multiple [FFfps|Hz]
 ```
-Quick conversion between TimeCode, KeyKode, frames, feet and metres of film stock, or simple arithmetics between two TimeCodes/KeyKodes.
+Quick conversion and simple arithmetic operations related to cinema film stock. Supported units are:
+ * timecodes (SMPTE-style, non-drop-frame only)
+ * frame numbers (both integer and non-integer frame rates);
+ * KeyKode (Kodak-style, e.g. `EJ2296111802+11`, up to perforation precision);
+ * stock length (metres)
+ * stock length (feet)
+
+Conversion among the above units implies conversion parameters need to be passed (os defaults used, as per table below): frame rates, film gauge and pulldown, etc.
 
 ```
   length  Stock lengths in either:
